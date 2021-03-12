@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		5239BA7A25FB8A7400ED76B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5239BA7825FB8A7400ED76B4 /* LaunchScreen.storyboard */; };
 		5239BA8525FB8A7400ED76B4 /* CyberToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239BA8425FB8A7400ED76B4 /* CyberToolsTests.swift */; };
 		5239BA9025FB8A7500ED76B4 /* CyberToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239BA8F25FB8A7500ED76B4 /* CyberToolsUITests.swift */; };
+		5239BAA125FB8AEF00ED76B4 /* NumerationTranfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239BAA025FB8AEF00ED76B4 /* NumerationTranfer.swift */; };
+		5239BAA625FB8BAC00ED76B4 /* JNWCyberToolsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239BAA525FB8BAC00ED76B4 /* JNWCyberToolsMenuViewController.swift */; };
+		5239BAAC25FB8E8700ED76B4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5239BAAB25FB8E8700ED76B4 /* SnapKit */; };
+		5239BAB425FB916700ED76B4 /* JNWNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239BAB325FB916600ED76B4 /* JNWNavigationViewController.swift */; };
+		5239BAB925FB922000ED76B4 /* JNWNumerationTranferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239BAB825FB922000ED76B4 /* JNWNumerationTranferViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		5239BA8B25FB8A7500ED76B4 /* CyberToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyberToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5239BA8F25FB8A7500ED76B4 /* CyberToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberToolsUITests.swift; sourceTree = "<group>"; };
 		5239BA9125FB8A7500ED76B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5239BAA025FB8AEF00ED76B4 /* NumerationTranfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumerationTranfer.swift; sourceTree = "<group>"; };
+		5239BAA525FB8BAC00ED76B4 /* JNWCyberToolsMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNWCyberToolsMenuViewController.swift; sourceTree = "<group>"; };
+		5239BAB325FB916600ED76B4 /* JNWNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNWNavigationViewController.swift; sourceTree = "<group>"; };
+		5239BAB825FB922000ED76B4 /* JNWNumerationTranferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNWNumerationTranferViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5239BAAC25FB8E8700ED76B4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,10 @@
 				5239BA7625FB8A7400ED76B4 /* Assets.xcassets */,
 				5239BA7825FB8A7400ED76B4 /* LaunchScreen.storyboard */,
 				5239BA7B25FB8A7400ED76B4 /* Info.plist */,
+				5239BAA025FB8AEF00ED76B4 /* NumerationTranfer.swift */,
+				5239BAA525FB8BAC00ED76B4 /* JNWCyberToolsMenuViewController.swift */,
+				5239BAB325FB916600ED76B4 /* JNWNavigationViewController.swift */,
+				5239BAB825FB922000ED76B4 /* JNWNumerationTranferViewController.swift */,
 			);
 			path = CyberTools;
 			sourceTree = "<group>";
@@ -144,6 +158,9 @@
 			dependencies = (
 			);
 			name = CyberTools;
+			packageProductDependencies = (
+				5239BAAB25FB8E8700ED76B4 /* SnapKit */,
+			);
 			productName = CyberTools;
 			productReference = 5239BA6A25FB8A7000ED76B4 /* CyberTools.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +232,9 @@
 				Base,
 			);
 			mainGroup = 5239BA6125FB8A7000ED76B4;
+			packageReferences = (
+				5239BAAA25FB8E8700ED76B4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 5239BA6B25FB8A7000ED76B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,8 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5239BAB925FB922000ED76B4 /* JNWNumerationTranferViewController.swift in Sources */,
+				5239BAA625FB8BAC00ED76B4 /* JNWCyberToolsMenuViewController.swift in Sources */,
 				5239BA7225FB8A7100ED76B4 /* ViewController.swift in Sources */,
+				5239BAB425FB916700ED76B4 /* JNWNavigationViewController.swift in Sources */,
 				5239BA6E25FB8A7100ED76B4 /* AppDelegate.swift in Sources */,
+				5239BAA125FB8AEF00ED76B4 /* NumerationTranfer.swift in Sources */,
 				5239BA7025FB8A7100ED76B4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5239BAAA25FB8E8700ED76B4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5239BAAB25FB8E8700ED76B4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5239BAAA25FB8E8700ED76B4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5239BA6225FB8A7000ED76B4 /* Project object */;
 }
