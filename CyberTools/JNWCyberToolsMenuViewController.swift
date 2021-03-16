@@ -21,6 +21,7 @@ class JNWCyberToolsMenuViewController: UIViewController {
         super.viewDidLoad()
 
         render()
+        events()
     }
     
     func render() {
@@ -31,6 +32,16 @@ class JNWCyberToolsMenuViewController: UIViewController {
             make.center.equalToSuperview()
             make.height.width.equalTo(50)
         }
+    }
+    
+    func events() {
+        numerationTransferButton.addTarget(self, action: #selector(jumpToNumeration), for: .touchUpInside)
+    }
+    
+    @objc
+    func jumpToNumeration() {
+        let numerationPage = JNWNumerationTranferViewController()
+        navigationController?.pushViewController(numerationPage, animated: true)
     }
 
 }
