@@ -20,6 +20,12 @@
 		5239BAAC25FB8E8700ED76B4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5239BAAB25FB8E8700ED76B4 /* SnapKit */; };
 		5239BAB425FB916700ED76B4 /* JNWNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239BAB325FB916600ED76B4 /* JNWNavigationViewController.swift */; };
 		5239BAB925FB922000ED76B4 /* JNWNumerationTranferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239BAB825FB922000ED76B4 /* JNWNumerationTranferViewController.swift */; };
+		52AF70A12609F2D60091379E /* JNWNumerationTranferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF70A02609F2D60091379E /* JNWNumerationTranferViewModel.swift */; };
+		52AF70AD2609FF460091379E /* JNWGlobalDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF70AC2609FF460091379E /* JNWGlobalDefinition.swift */; };
+		52AF70C4260A0C660091379E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52AF70C3260A0C660091379E /* RxSwift */; };
+		52AF70C6260A0C660091379E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 52AF70C5260A0C660091379E /* RxRelay */; };
+		52AF70C8260A0C660091379E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 52AF70C7260A0C660091379E /* RxCocoa */; };
+		52AF70CA260A0C660091379E /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 52AF70C9260A0C660091379E /* RxBlocking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,10 @@
 		5239BAA525FB8BAC00ED76B4 /* JNWCyberToolsMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNWCyberToolsMenuViewController.swift; sourceTree = "<group>"; };
 		5239BAB325FB916600ED76B4 /* JNWNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNWNavigationViewController.swift; sourceTree = "<group>"; };
 		5239BAB825FB922000ED76B4 /* JNWNumerationTranferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNWNumerationTranferViewController.swift; sourceTree = "<group>"; };
+		52AF70962609F2C00091379E /* CyberTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CyberTools-Bridging-Header.h"; sourceTree = "<group>"; };
+		52AF70A02609F2D60091379E /* JNWNumerationTranferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNWNumerationTranferViewModel.swift; sourceTree = "<group>"; };
+		52AF70A52609F72E0091379E /* CyberTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CyberTools.entitlements; sourceTree = "<group>"; };
+		52AF70AC2609FF460091379E /* JNWGlobalDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNWGlobalDefinition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AF70C6260A0C660091379E /* RxRelay in Frameworks */,
+				52AF70C4260A0C660091379E /* RxSwift in Frameworks */,
+				52AF70C8260A0C660091379E /* RxCocoa in Frameworks */,
 				5239BAAC25FB8E8700ED76B4 /* SnapKit in Frameworks */,
+				52AF70CA260A0C660091379E /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +123,7 @@
 		5239BA6C25FB8A7100ED76B4 /* CyberTools */ = {
 			isa = PBXGroup;
 			children = (
+				52AF70A52609F72E0091379E /* CyberTools.entitlements */,
 				5239BA6D25FB8A7100ED76B4 /* AppDelegate.swift */,
 				5239BA6F25FB8A7100ED76B4 /* SceneDelegate.swift */,
 				5239BA7125FB8A7100ED76B4 /* ViewController.swift */,
@@ -120,6 +135,9 @@
 				5239BAA525FB8BAC00ED76B4 /* JNWCyberToolsMenuViewController.swift */,
 				5239BAB325FB916600ED76B4 /* JNWNavigationViewController.swift */,
 				5239BAB825FB922000ED76B4 /* JNWNumerationTranferViewController.swift */,
+				52AF70A02609F2D60091379E /* JNWNumerationTranferViewModel.swift */,
+				52AF70962609F2C00091379E /* CyberTools-Bridging-Header.h */,
+				52AF70AC2609FF460091379E /* JNWGlobalDefinition.swift */,
 			);
 			path = CyberTools;
 			sourceTree = "<group>";
@@ -160,6 +178,10 @@
 			name = CyberTools;
 			packageProductDependencies = (
 				5239BAAB25FB8E8700ED76B4 /* SnapKit */,
+				52AF70C3260A0C660091379E /* RxSwift */,
+				52AF70C5260A0C660091379E /* RxRelay */,
+				52AF70C7260A0C660091379E /* RxCocoa */,
+				52AF70C9260A0C660091379E /* RxBlocking */,
 			);
 			productName = CyberTools;
 			productReference = 5239BA6A25FB8A7000ED76B4 /* CyberTools.app */;
@@ -212,6 +234,7 @@
 				TargetAttributes = {
 					5239BA6925FB8A7000ED76B4 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					5239BA7F25FB8A7400ED76B4 = {
 						CreatedOnToolsVersion = 12.4;
@@ -234,6 +257,7 @@
 			mainGroup = 5239BA6125FB8A7000ED76B4;
 			packageReferences = (
 				5239BAAA25FB8E8700ED76B4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				52AF70C2260A0C660091379E /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 5239BA6B25FB8A7000ED76B4 /* Products */;
 			projectDirPath = "";
@@ -278,11 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AF70AD2609FF460091379E /* JNWGlobalDefinition.swift in Sources */,
 				5239BAB925FB922000ED76B4 /* JNWNumerationTranferViewController.swift in Sources */,
 				5239BAA625FB8BAC00ED76B4 /* JNWCyberToolsMenuViewController.swift in Sources */,
 				5239BA7225FB8A7100ED76B4 /* ViewController.swift in Sources */,
 				5239BAB425FB916700ED76B4 /* JNWNavigationViewController.swift in Sources */,
 				5239BA6E25FB8A7100ED76B4 /* AppDelegate.swift in Sources */,
+				52AF70A12609F2D60091379E /* JNWNumerationTranferViewModel.swift in Sources */,
 				5239BAA125FB8AEF00ED76B4 /* NumerationTranfer.swift in Sources */,
 				5239BA7025FB8A7100ED76B4 /* SceneDelegate.swift in Sources */,
 			);
@@ -460,6 +486,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CyberTools/CyberTools.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CyberTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,6 +496,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.john.CyberTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CyberTools/CyberTools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,6 +509,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CyberTools/CyberTools.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CyberTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,6 +519,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.john.CyberTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CyberTools/CyberTools-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -621,6 +656,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		52AF70C2260A0C660091379E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -628,6 +671,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5239BAAA25FB8E8700ED76B4 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		52AF70C3260A0C660091379E /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52AF70C2260A0C660091379E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		52AF70C5260A0C660091379E /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52AF70C2260A0C660091379E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		52AF70C7260A0C660091379E /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52AF70C2260A0C660091379E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		52AF70C9260A0C660091379E /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52AF70C2260A0C660091379E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

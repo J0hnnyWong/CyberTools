@@ -12,6 +12,25 @@ public enum numeration: Comparable {
     case binary // 2
     case decimal // 10
     case sexadecimal //16
+    
+    static var all: [numeration] = {
+        return [
+            numeration.binary,
+            numeration.decimal,
+            numeration.sexadecimal
+        ]
+    }()
+    
+    func description() -> String {
+        switch self {
+        case .binary:
+            return JNWLocalizedString(key: "binary")
+        case .decimal:
+            return JNWLocalizedString(key: "decimal")
+        case .sexadecimal:
+            return JNWLocalizedString(key: "sexadecimal")
+        }
+    }
 }
 
 class NumerationTranfer {
