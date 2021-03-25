@@ -48,6 +48,10 @@ private extension NumerationTranfer {
     
     static func transformToDecimal(value: String, from: numeration) -> String {
         
+        if isGreaterThanMaxInt(value: value) {
+            return ""
+        }
+        
         guard isValidNumberString(value: value) else { return "" }
         
         var res = 0
@@ -95,6 +99,24 @@ private extension NumerationTranfer {
             }
         }
         return true
+    }
+    
+    static func isGreaterThanMaxInt(value: String) -> Bool {
+        if "\(Int.max)".count > value.count {
+            return false
+        } else if "\(Int.max)".count < value.count {
+            return true
+        } else if "\(Int.max)".count == value.count {
+            for charIndex in 0...value.count {
+                let index = value.index(value.startIndex, offsetBy: charIndex)
+                if value[index] > "\(Int.max)"[index] {
+                    return true
+                }
+            }
+            return false
+        } else {
+            return false
+        }
     }
 
     static func getNumerationNumber(numer: numeration) -> Int {

@@ -49,12 +49,16 @@ class JNWNumerationTranferViewController: UIViewController {
     
     lazy var fromTextField: UITextField = {
         let tf = UITextField()
+        tf.placeholder = "from"
+        tf.delegate = self
         tf.borderStyle = .roundedRect
         return tf
     }()
     
     lazy var toTextField: UITextField = {
         let tf = UITextField()
+        tf.placeholder = "to"
+        tf.delegate = self
         tf.borderStyle = .roundedRect
         return tf
     }()
@@ -114,31 +118,38 @@ class JNWNumerationTranferViewController: UIViewController {
         
         fromTypeButton.addTarget(self, action: #selector(fromButtonAction), for: .touchUpInside)
         toTypeButton.addTarget(self, action: #selector(toButtonAction), for: .touchUpInside)
+        fromTextField.addTarget(self, action: #selector(textFieldEditing(sender:)), for: .editingChanged)
         
-        viewModel.fromType.subscribe(onNext: { (num) in
-            print(num)
-        }).disposed(by: disposeBag)
         
-        viewModel.fromType.subscribe(onNext: { (num) in
-            print(num)
-        }).disposed(by: disposeBag)
+        viewModel.fromTypeDidSet.append { [weak self] (nume) in
+            guard let sself = self else { return }
+            sself.fromTypeButton.setTitle("\(nume)", for: .normal)
+        }
         
-        viewModel.fromType.subscribe(onNext: { (num) in
-            print(num)
-        }).disposed(by: disposeBag)
+        viewModel.toTypeDidSet.append { [weak self] (nume) in
+            guard let sself = self else { return }
+            sself.toTypeButton.setTitle("\(nume)", for: .normal)
+        }
+        
+        viewModel.toNumStrDidSet.append { [weak self] (result) in
+            guard let sself = self else { return }
+            sself.toTextField.text = result
+        }
     }
     
     @objc
     func fromButtonAction() {
-        showNumerationTypeListMenu(title: "type", message: "from") { (num) in
-            print(num)
+        showNumerationTypeListMenu(title: "type", message: "from") { [weak self] (num) in
+            guard let sself = self else { return }
+            sself.viewModel.fromType = num
         }
     }
     
     @objc
     func toButtonAction() {
-        showNumerationTypeListMenu(title: "type", message: "to") { (num) in
-            print(num)
+        showNumerationTypeListMenu(title: "type", message: "to") { [weak self] (num) in
+            guard let sself = self else { return }
+            sself.viewModel.toType = num
         }
     }
     
@@ -156,9 +167,22 @@ class JNWNumerationTranferViewController: UIViewController {
         alert.addAction(UIAlertAction(title: JNWLocalizedString(key: "cancel"), style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+}
 
-    func transfor() {
-        
-        NumerationTranfer.transfer(value: fromTextField.text ?? "", from: .binary, to: .decimal)
+extension JNWNumerationTranferViewController: UITextFieldDelegate {
+    
+    @objc
+    func textFieldEditing(sender: UITextField) {
+        if sender == fromTextField {
+            viewModel.fromNumStr = sender.text
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        if textField == fromTextField {
+            viewModel.fromNumStr = textField.text
+        } //else if textField == toTextField {
+//            viewModel.toNumStr = textField.text
+//        }
     }
 }
